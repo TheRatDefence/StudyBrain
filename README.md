@@ -13,7 +13,7 @@ StudyBrain is a Flask-based web application that uses Claude AI and custom MCP t
 - **Intelligent Marking** - Detailed feedback and misconception identification
 - **Progress Tracking** - Quantitative metrics (Conceptual Understanding + Functional Knowledge)
 - **Spaced Repetition** - FSRS algorithm for optimal review scheduling
-- **Cross-Subject Integration** - Connect concepts across Physics, Maths, Chemistry, etc.
+- **Cross-Subject Integration** - Connect concepts across Physics, Maths, Software Engineering, etc.
 - **Study Timer** - Toggl-style time tracking and learning rate calculation
 
 ---
@@ -23,9 +23,9 @@ StudyBrain is a Flask-based web application that uses Claude AI and custom MCP t
 1. **Physics** (HSC)
 2. **Mathematics Extension 1** (HSC)
 3. **Mathematics Advanced** (HSC)
-4. **Chemistry** (HSC)
-5. **Software Engineering** (HSC)
-6. **English Standard** (HSC)
+4. **Software Engineering** (HSC)
+5. **English Standard** (HSC)
+6. **Music** (HSC)
 
 Each subject has its own specialized agent with deep curriculum knowledge and NESA alignment.
 
@@ -41,6 +41,7 @@ Each subject has its own specialized agent with deep curriculum knowledge and NE
 - Handles study strategy and prioritization
 
 **Subject Agents (6):**
+- Physics, Mathematics Extension 1, Mathematics Advanced, Software Engineering, English Standard, Music
 - Deep HSC syllabus knowledge for each subject
 - Access to specialized sub-agents
 

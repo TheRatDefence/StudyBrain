@@ -26,9 +26,9 @@ You are assisting with the design and development of **StudyBrain**, an intellig
 - Comfortable with command-line tools
 
 **Subjects (HSC):**
+- Physics
 - Mathematics Extension 1
 - Mathematics Advanced
-- Physics
 - Software Engineering
 - English Standard
 - Music
@@ -117,9 +117,9 @@ Build an AI-powered study system that:
 1. Physics
 2. Mathematics Extension 1
 3. Mathematics Advanced
-4. Chemistry
-5. Software Engineering
-6. English Standard
+4. Software Engineering
+5. English Standard
+6. Music
 
 Each subject agent has access to specialized sub-agents:
 
