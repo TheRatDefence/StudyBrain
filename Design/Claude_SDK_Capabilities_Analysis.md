@@ -260,7 +260,7 @@ async def generate_diagnostic_questions(args):
         "topic": str,
         "question": str,
         "user_answer": str,
-        "correct_answer": str,
+        "answer_is_correct": str,
         "confidence": int,  # 1-5
         "is_correct": bool
     }

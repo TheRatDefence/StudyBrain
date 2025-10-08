@@ -433,7 +433,7 @@ async def generate_practice_question(args: dict[str, Any]) -> dict[str, Any]:
                 "C": "Option C",
                 "D": "Option D"
             },
-            "correct_answer": "B",
+            "answer_is_correct": "B",
             "marks": 1
         }
     else:

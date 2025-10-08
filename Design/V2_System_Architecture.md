@@ -26,11 +26,11 @@ StudyBrain V2 is a Flask-based web application powered by Claude Agent SDK, impl
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│              Flask Web Application (Port 5000)               │
-│  ┌─────────────┐  ┌──────────────┐  ┌─────────────────┐   │
-│  │  Dashboard  │  │ Study Session│  │ Progress Charts │   │
-│  │  (Home)     │  │  Interface   │  │  & Analytics    │   │
-│  └─────────────┘  └──────────────┘  └─────────────────┘   │
+│              Flask Web Application (Port 5000)              │
+│  ┌─────────────┐  ┌──────────────┐  ┌─────────────────┐     │
+│  │  Dashboard  │  │ Study Session│  │ Progress Charts │     │
+│  │  (Home)     │  │  Interface   │  │  & Analytics    │     │
+│  └─────────────┘  └──────────────┘  └─────────────────┘     │
 └────────────────────────┬────────────────────────────────────┘
                          │
                          ├─── Routes & Controllers
@@ -42,23 +42,23 @@ StudyBrain V2 is a Flask-based web application powered by Claude Agent SDK, impl
 │ Claude Agent SDK     │    │  JSON Data Store     │
 │ (Python)             │    │                      │
 │                      │    │ - sessions/          │
-│ ┌────────────────┐  │    │ - exams/             │
-│ │ Coordinator    │  │    │ - progress/          │
-│ │ Agent          │  │    │ - resources/         │
-│ └───────┬────────┘  │    │ - study_timer/       │
+│ ┌────────────────┐   │    │ - exams/             │
+│ │ Coordinator    │   │    │ - progress/          │
+│ │ Agent          │   │    │ - resources/         │
+│ └───────┬────────┘   │    │ - study_timer/       │
 │         │            │    └──────────────────────┘
-│    ┌────┴─────┐     │
-│    │          │     │
-│    ▼          ▼     │
-│ ┌──────┐  ┌──────┐ │
-│ │Subject│  │Shared│ │
-│ │Agents │  │Tools │ │
-│ │       │  │      │ │
-│ │Physics│  │Quiz  │ │
-│ │Maths  │  │Mark  │ │
-│ │Chem   │  │FSRS  │ │
-│ │... │  │Curriculum│ │
-│ └──────┘  └──────┘ │
+│    ┌────┴─────┐      │
+│    │          │      │
+│    ▼          ▼      │
+│ ┌───────┐  ┌──────┐  │ 
+│ │Subject│  │Shared│  │
+│ │Agents │  │Tools │  │
+│ │       │  │      │  │
+│ │Physics│  │Quiz  │  │
+│ │Maths  │  │Mark  │  │
+│ │Chem   │  │FSRS  │  │
+│ │...    │Curriculum│ │
+│ └───────┘  └──────┘  │
 └──────────────────────┘
 ```
 
@@ -91,7 +91,6 @@ AVAILABLE AGENTS:
 - physics-agent: HSC Physics (Modules 1-4)
 - maths-ext1-agent: Mathematics Extension 1
 - maths-adv-agent: Mathematics Advanced
-- chemistry-agent: Chemistry
 - software-agent: Software Engineering
 - english-agent: English Standard
 - music-agent: Music
@@ -129,10 +128,9 @@ When asked "What should I study next?", consider:
 1. Physics
 2. Mathematics Extension 1
 3. Mathematics Advanced
-4. Chemistry
-5. Software Engineering
-6. English Standard
-7. Music
+4. Software Engineering
+5. English Standard
+6. Music
 
 **Common Structure:**
 ```python
@@ -360,7 +358,7 @@ async def generate_diagnostic_quiz(args):
         "topic": str,
         "question_id": str,
         "student_answer": str,
-        "correct_answer": str,
+        "answer_is_correct": str,
         "marks_awarded": float,
         "marks_total": float,
         "confidence": int,  # 1-5

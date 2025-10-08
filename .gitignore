@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Flask
+instance/
+.webassets-cache
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Data files (sensitive study data)
+studybrain_web/data/sessions/*
+studybrain_web/data/progress/*
+studybrain_web/data/quiz_results/*
+studybrain_web/data/exams/*
+studybrain_web/data/study_timer/*
+studybrain_web/data/resource_index/*
+
+# But keep directory structure
+!studybrain_web/data/sessions/.gitkeep
+!studybrain_web/data/progress/.gitkeep
+!studybrain_web/data/quiz_results/.gitkeep
+!studybrain_web/data/exams/.gitkeep
+!studybrain_web/data/study_timer/.gitkeep
+!studybrain_web/data/resource_index/.gitkeep
+
+# Resources (personal study materials)
+resources/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+*.cover
+.hypothesis/
+
+# Logs
+*.log
+logs/
+
+# OS
+Thumbs.db
