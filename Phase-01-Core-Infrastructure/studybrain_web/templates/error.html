@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    {% if redirect_url and redirect_seconds %}
+    <meta http-equiv="refresh" content="{{ redirect_seconds }}; url={{ redirect_url }}">
+    {% endif %}
+</head>
+<body>
+<nav>
+    <a href="/">Home</a>
+</nav>
+
+<div class="main-content">
+    <div class="error-container">
+        <div class="error-icon">⚠️</div>
+        <h1>{{ error_title or "Error" }}</h1>
+        <p class="error-message">{{ error_message }}</p>
+
+        {% if redirect_url and redirect_seconds %}
+        <p class="redirect-notice">Redirecting in {{ redirect_seconds }} second{{ 's' if redirect_seconds != 1 else '' }}...</p>
+        {% endif %}
+
+        <div class="error-actions">
+            {% if redirect_url %}
+            <a href="{{ redirect_url }}" class="btn">Continue</a>
+            {% endif %}
+            <a href="/" class="btn btn-secondary">Return Home</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

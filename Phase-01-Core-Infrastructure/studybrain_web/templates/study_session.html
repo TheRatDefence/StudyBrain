@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ subject }} - Study Session</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+    <a href="/">Dashboard</a>
+</nav>
+
+<div class="main-content">
+    <h1>{{ subject }} Study Session</h1>
+
+    <div class="conversation-area">
+        {% if conversation %}
+            {% for message in conversation %}
+                <div class="message {{ message.type }}">
+                    <p>{{ message.text }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p class="placeholder">Ask a question to start learning!</p>
+        {% endif %}
+    </div>
+
+    <form method="POST">
+        <textarea name="question" placeholder="Ask me anything about {{ subject }}..." required></textarea>
+        <button type="submit">Ask</button>
+    </form>
+</div>
+
+</body>
+</html>
+
+<!-- TODO: Style .conversation-area and .message in style.css - This would be better for you to do since I'm not a front end developer-->
+<!-- TODO: Add timer widget to session header  - I don't know how to do this-->

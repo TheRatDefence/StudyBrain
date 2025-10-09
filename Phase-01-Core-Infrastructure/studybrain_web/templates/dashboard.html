@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StudyBrain - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+    <a href="/">Dashboard</a>
+</nav>
+
+<div class="main-content">
+    <h1>StudyBrain - HSC Study System</h1>
+    <div class="subject-cards-container">
+        <h2>Subjects</h2>
+        <!-- This doesn't work, when I load this page it doesn't show my subjects -->
+        {% for subject in subjects %}
+            <a class="subject-container" href="{{ url_for('study_session', subject=subject) }}">
+                <h3>{{ subject }}</h3>
+                <!-- TODO: Add progress stats (Con/Func scores, due reviews) - Complete this when those stats are available-->
+            </a>
+        {% endfor %}
+    </div>
+</div>
+
+</body>
+</html>
+
+<!-- TODO: Style .subject-cards-container and .subject-container in style.css - This would be better for you to do since I'm not a front end developer-->
