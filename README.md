@@ -45,15 +45,18 @@ Visit `http://localhost:5000`
 ### For Development
 
 **Start Here:**
-1. Read [ROADMAP.md](ROADMAP.md) - 10-phase development plan
+1. Read [DEVELOPMENT_PLAN.md](DEVELOPMENT_PLAN.md) - Feature-domain development plan
 2. Check [DESIGN.md](DESIGN.md) - Technical architecture
-3. Navigate to Phase-01-Core-Infrastructure/ to begin building
+3. Navigate to studybrain_web/ for the main application
 
 ## 🏗️ Architecture
 
 ### Multi-Agent System
 
-**Coordinator Agent** → Routes to subject agents, manages cross-subject integration
+**Coordinator Agent** → Study management specialist accessible like any subject agent
+- **Interactive Mode:** Study schedules, exam timing, cross-subject planning
+- **Background Mode:** Auto-monitors all subject progress, exam dates, study patterns
+- Does NOT teach subject content (delegates to subject agents)
 
 **6 Subject Agents** → Physics, Maths, Software Eng, English, Music
 - Each has 4 specialized sub-agents:
@@ -84,45 +87,45 @@ Improvement thresholds: 20% Con / 15% Func before moving on
 
 ## 🎯 Development Status
 
-| Phase | Status | Description | Time |
-|-------|--------|-------------|------|
-| 1. Core Infrastructure | 🟡 Ready | Flask + coordinator + Physics | 1-2d |
-| 2. Quiz System | ⏳ Pending | Question gen & submission | 2-3d |
-| 3. Progress Tracking | ⏳ Pending | Con/Func scores & charts | 2-3d |
-| 4. Multi-Subject | ⏳ Pending | All 6 subjects | 1-2d |
-| 5. FSRS Integration | ⏳ Pending | Spaced repetition | 2d |
-| 6. Study Sessions | ⏳ Pending | Timer & persistence | 1-2d |
-| 7. UI Polish | ⏳ Pending | Charts, LaTeX, styling | 2-3d |
-| 8. Sub-Agents | ⏳ Pending | Intelligent question gen | 3-4d |
-| 9. Resources | ⏳ Pending | PDF organization | 2-3d |
-| 10. Cross-Subject | ⏳ Pending | Study recommendations | 2-3d |
+**Foundation Complete:**
+- ✅ Flask web application
+- ✅ Physics AI agent (working)
+- ✅ Study session page
+- ✅ Session persistence
+- ✅ Error handling
 
-**Current:** Planning complete, Phase 1 ready
-**Next Milestone:** Usable MVP (after Phase 4)
+**Priority 1 - Performance Tracking (Next):**
+- Track assessment marks
+- Log study hours
+- Compare predicted vs actual performance
 
-See [ROADMAP.md](ROADMAP.md) for detailed phase info.
+**See [DEVELOPMENT_PLAN.md](DEVELOPMENT_PLAN.md) for:**
+- 7 feature domains
+- Technology learning progression
+- HSC curriculum alignment
+- Implementation priorities
 
 ## 📂 Project Structure
 
 ```
 StudyBrain/
 ├── README.md              # This file
-├── ROADMAP.md             # Development plan
+├── DEVELOPMENT_PLAN.md    # Development plan
+├── ROADMAP.md             # Old roadmap (archived)
 ├── DESIGN.md              # Technical architecture
 ├── CLAUDE.md              # AI assistant context
 │
-├── Phase-01-Core-Infrastructure/
-├── Phase-02-Quiz-System/
-├── ...
-├── Phase-10-Cross-Subject/
+├── studybrain_web/        # Flask application
+│   ├── app.py
+│   ├── agents/
+│   ├── mcp_tools/
+│   ├── templates/
+│   ├── static/
+│   └── data/
 │
-└── studybrain_web/        # Flask application (Phase 1+)
-    ├── app.py
-    ├── agents/
-    ├── mcp_tools/
-    ├── templates/
-    ├── static/
-    └── data/
+├── Resources/             # Curriculum materials
+├── Design/                # Design diagrams
+└── CLAUDE_DOCS/           # API documentation
 ```
 
 ## 🎓 Student Context
@@ -169,8 +172,8 @@ MIT License - see [LICENSE](LICENSE) file
 
 ## Quick Links
 
-- 📖 [Roadmap](ROADMAP.md) - Development plan
+- 📖 [Development Plan](DEVELOPMENT_PLAN.md) - Feature-domain approach
 - 🏗️ [Design](DESIGN.md) - Technical details
-- 🚀 [Phase 1](Phase-01-Core-Infrastructure/) - Start building
+- 🚀 [Web App](studybrain_web/) - Main application
 
 **Built with Claude AI · Designed for HSC Success** 🎓

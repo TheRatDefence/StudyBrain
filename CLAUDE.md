@@ -4,11 +4,11 @@
 
 ## Quick Context
 
-AI study management system for HSC subjects using Flask + Claude SDK with 10-phase agile development.
+AI study management system for HSC subjects using Flask + Claude SDK with feature-domain agile development.
 
 **Subjects:** Physics, Maths Ext 1, Maths Adv, Software Engineering, English, Music
 
-**Current Status:** Phase 1 ready (see ROADMAP.md)
+**Current Status:** Foundation complete (see DEVELOPMENT_PLAN.md)
 
 ## Architecture
 
@@ -25,17 +25,17 @@ AI study management system for HSC subjects using Flask + Claude SDK with 10-pha
 ## Documentation
 
 - **README.md** - Complete project overview & setup
-- **ROADMAP.md** - 10-phase development plan
+- **DEVELOPMENT_PLAN.md** - Feature-domain development approach
 - **DESIGN.md** - Technical architecture & implementation
-- **Phase-XX/** - Phase-specific implementation guides
+- **ROADMAP.md** - Old phase-based plan (archived)
 
 ## Development Principles
 
-1. Build incrementally (working system after each phase)
+1. Build incrementally (working system after each feature)
 2. Test with real HSC content
 3. Track everything measurable
 4. Privacy-first (local storage)
 
 ---
 
-**For detailed information, see README.md and ROADMAP.md**
+**For detailed information, see README.md and DEVELOPMENT_PLAN.md**
